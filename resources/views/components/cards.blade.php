@@ -1,6 +1,7 @@
 <section id="diensten" class="bg-secondary py-12">
     <div class="container uppercase font-medium" id="diensten">
-        <h3 class="text-sm text-white mb-5">Waar wij mee kunnen helpen</h3>
+        <h3 class="text-sm text-white">Waar wij mee kunnen helpen</h3>
+        <div class="w-12 h-[2px] bg-[#D2153D] my-5"></div>
         <div id="cards" class="grid lg:grid-cols-3 lg:justify-between gap-12 lg:gap-24 uppercase">
             @foreach ($categories as $category)
             <a href="{{ route('home') }}#contact">
