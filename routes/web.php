@@ -23,6 +23,13 @@ Route::get('/', function () {
     return view('home', ['categories' => $categories]);
 })->name('home');
 
+Route::get('/ons-werk', function () {
+    $directory = $_SERVER['DOCUMENT_ROOT'] . "/images/ons-werk/";
+    $filecount = count(glob($directory . "*"));
+
+    return view('ons-werk', ['filecount' => $filecount]);
+})->name('ons-werk');
+
 Route::post('/contact', function (Request $request) {
     // Validate the form data
     $validatedData = $request->validate([
