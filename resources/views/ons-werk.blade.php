@@ -11,7 +11,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-12">
                 @for ($i = 1; $i < $filecount + 1; $i++)
-                    <img src="{{ asset('images/ons-werk/' . $i . '.jpg') }}" class="w-full h-[350px]">
+                    <img src="{{ asset('images/ons-werk/' . $i . '.jpg') }}" class="w-full h-[350px]" data-aos="fade-up" data-aos-delay="{{ $i }}00">
                 @endfor
             </div>
         </div>

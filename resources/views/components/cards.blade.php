@@ -3,8 +3,8 @@
         <h3 class="text-sm text-white">Waar wij mee kunnen helpen</h3>
         <div class="w-12 h-[2px] bg-[#D2153D] my-5"></div>
         <div id="cards" class="grid lg:grid-cols-3 lg:justify-between gap-12 lg:gap-24 uppercase">
-            @foreach ($categories as $category)
-            <a href="{{ route('home') }}#contact">
+            @foreach ($categories as $key=>$category)
+            <a href="{{ route('home') }}#contact" data-aos="fade-up" data-aos-delay="{{ $key }}00">
                 <div id="card" class="relative">
                     <img src="{{ asset('/images/diensten/' . $category->img_src . '') }}" class="w-full">
                     <div class="bg-black text-white absolute top-0 w-full py-1">
