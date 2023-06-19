@@ -25,7 +25,7 @@ Route::get('/', function () {
 
 Route::get('/ons-werk', function () {
     $directory = $_SERVER['DOCUMENT_ROOT'] . "/images/ons-werk/";
-    $filecount = count(glob($directory . "*"));
+    $filecount = 99;
 
     return view('ons-werk', ['filecount' => $filecount]);
 })->name('ons-werk');
