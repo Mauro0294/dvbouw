@@ -25,7 +25,7 @@ h2 {
 }
 
 p {
-    font-size: 1.0625rem;
+    font-size: 1rem;
 }
 
 #hero {
@@ -45,6 +45,10 @@ p {
 
 .bg-primary {
     background: #001A2E;
+}
+
+.bg-secondary {
+    background: #07233B;
 }
 
 .active {
@@ -95,4 +99,3 @@ p a {
 .hamburger-btn.active > .hamburger-line:last-child {
     transform: rotate(-45deg) translate(6px, -6px);
 }
-
