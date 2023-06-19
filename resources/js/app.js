@@ -18,7 +18,6 @@ const hamburgerLines = hamburgerBtn.querySelectorAll('.hamburger-line');
 
 hamburgerBtn.addEventListener('click', function() {
     mobileMenu.classList.toggle('hidden');
-    mobileMenu.classList.toggle('flex');
     hamburgerBtn.classList.toggle('active');
 
     hamburgerLines.forEach(line => line.classList.toggle('active'));

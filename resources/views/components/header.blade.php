@@ -15,9 +15,9 @@
             </button>
         </div>
     </div>
-    <ul id="mobile-menu" class="hidden lg:hidden justify-between font-bold !py-4 container">
-        <a href="{{ route('home') }}"><li>HOME.</li></a>
-        <a href="{{ route('home') }}#diensten"><li>DIENSTEN.</li></a>
-        <a href="{{ route('home') }}#contact"><li>CONTACT.</li></a>
+    <ul id="mobile-menu" class="hidden lg:hidden justify-between font-bold !py-4 container text-lg">
+        <a href="{{ route('home') }}"><li class="text-center bg-[#07233B] py-2 mb-4">HOME.</li></a>
+        <a href="{{ route('home') }}#diensten"><li class="text-center bg-[#07233B] py-2 mb-4">DIENSTEN.</li></a>
+        <a href="{{ route('home') }}#contact"><li class="text-center bg-[#07233B] py-2">CONTACT.</li></a>
     </ul>
 </header>

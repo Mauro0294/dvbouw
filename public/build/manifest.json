@@ -4,12 +4,12 @@
     "src": "public/images/background_hero.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-b7cfa2b7.css",
+    "file": "assets/app-c0958cf7.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-eb7c0cc3.js",
+    "file": "assets/app-afc1e657.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
