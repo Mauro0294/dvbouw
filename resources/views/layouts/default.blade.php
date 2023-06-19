@@ -6,6 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ asset('images/favicon.png') }}">
+    <title>DV Bouw | @yield('page-title')</title>
     @vite('resources/css/app.css')
 </head>
 <body class="bg-primary">

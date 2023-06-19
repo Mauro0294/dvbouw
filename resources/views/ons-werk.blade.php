@@ -1,4 +1,6 @@
 @extends('layouts.default')
+@section('page-title', 'Ons werk')
+
 @section('content')
     @include('components.hero')
 

@@ -1,15 +1,18 @@
 import './bootstrap';
 
 
-document.addEventListener('scroll', function () {
-    if (window.scrollY > 0) {
-        console.log('hide');
-        document.querySelector('#scroll-text').classList.add = 'hide-scroll';
-    } else {
-        console.log('show');
-        document.querySelector('#scroll-text').classList.remove = 'hide-scroll';
-    }
-});
+if (document.querySelector('#scroll-text')) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 25) {
+            document.querySelector('#scroll-text').style.opacity = 0;
+            document.querySelector('#scroll-text').style.transform = 'translateY(-25%)';
+        } else {
+            document.querySelector('#scroll-text').style.opacity = 1;
+            document.querySelector('#scroll-text').style.transform = 'translateY(0)';
+        }
+    });
+}
+
 
 const mobileMenu = document.getElementById('mobile-menu');
 const hamburgerBtn = document.getElementById('hamburger-btn');

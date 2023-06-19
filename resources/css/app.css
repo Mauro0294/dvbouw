@@ -39,8 +39,10 @@ p {
     padding: 0 1rem;
 }
 
-.hide-scroll {
-    opacity: 0;
+
+
+#scroll-text {
+    transition: 0.5s ease-in-out;
 }
 
 .bg-primary {
