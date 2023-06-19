@@ -1,6 +1,6 @@
 <footer class="bg-primary py-12 text-white">
     <div class="lg:flex justify-between container" id="contact">
-        <div>
+        <div data-aos="zoom-in-right">
             <div>
                 <h2 class="font-bold uppercase">Contact</h2>
                 <p class="max-w-[400px]">Wil je met ons samenwerken, heb je een mooie klus voor ons? Stuur ons dan een e-mail.</p>
@@ -8,7 +8,7 @@
                 <p class="max-w-[400px] mt-8">Volg ons op <a target="_blank" rel="noreferrer" href="https://www.facebook.com/p/DV-Onderhoud-100064673394829/">facebook</a> om op de hoogte te blijven van het laatste nieuws!</p>
             </div>
         </div>
-        <div class="lg:w-1/3 mt-8 lg:mt-0">
+        <div class="lg:w-1/3 mt-8 lg:mt-0" data-aos="zoom-in-up" data-aos-delay="200">
             <div class="w-full">
                 <form method="POST" class="flex flex-col" action="{{ route('contact') }}">
                     @csrf
