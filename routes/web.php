@@ -5,6 +5,7 @@ use App\Models\Category;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use App\Mail\ContactFormMail;
+use Illuminate\Support\Facades\App;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +25,13 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/ons-werk', function () {
-    $directory = $_SERVER['DOCUMENT_ROOT'] . "/images/ons-werk/";
-    $filecount = 99;
+    if (App::environment() == 'local') {
+        $directory = $_SERVER['DOCUMENT_ROOT'] . "/images/ons-werk/";
+    } else {
+        $directory = $_SERVER['DOCUMENT_ROOT'] . "/public/images/ons-werk/";
+    }
+
+    $filecount = count(glob($directory . "*"));
 
     return view('ons-werk', ['filecount' => $filecount]);
 })->name('ons-werk');
