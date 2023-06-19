@@ -1,11 +1,20 @@
 <footer class="bg-primary py-12 text-white">
     <div class="lg:flex justify-between container" id="contact">
         <div data-aos="zoom-in-right">
-            <div>
+            <div class="max-w-[400px]">
                 <h2 class="font-bold uppercase">Contact</h2>
-                <p class="max-w-[400px]">Wil je met ons samenwerken, heb je een mooie klus voor ons? Stuur ons dan een e-mail.</p>
-                <p class="max-w-[400px] mt-8">Via dit formulier vraag je eenvoudig een offerte aan voor in jouw (nieuwbouw)woning of (nieuwbouw)project.</p>
-                <p class="max-w-[400px] mt-8">Volg ons op <a target="_blank" rel="noreferrer" href="https://www.facebook.com/p/DV-Onderhoud-100064673394829/">facebook</a> om op de hoogte te blijven van het laatste nieuws!</p>
+                <p>Wil je met ons samenwerken, heb je een mooie klus voor ons? Stuur ons dan een e-mail.</p>
+                <p class="mt-8">Via dit formulier vraag je eenvoudig een offerte aan voor in jouw (nieuwbouw)woning of (nieuwbouw)project.</p>
+                <p class="mt-8">Volg ons op <a target="_blank" rel="noreferrer" href="https://www.facebook.com/p/DV-Onderhoud-100064673394829/">facebook</a> om op de hoogte te blijven van het laatste nieuws!</p>
+
+                <p class="mt-8">
+                    <div class="flex items-center gap-2">
+                    <img src="{{ asset('images/email.svg') }}" class="w-4"><a href="mailto:dimitar.dimitrov94@gmail.com">dimitar.dimitrov94@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <img src="{{ asset('images/phone.svg') }}" class="w-4"><a href="tel:0618865015">06 18865015</a>
+                    </div>
+                </p>
             </div>
         </div>
         <div class="lg:w-1/3 mt-8 lg:mt-0" data-aos="zoom-in-up" data-aos-delay="200">
