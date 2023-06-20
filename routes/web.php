@@ -45,7 +45,7 @@ Route::post('/contact', function (Request $request) {
         'message' => 'required',
     ]);
     
-    Mail::to('mauroscheltens@hotmail.com')->send(new ContactFormMail($validatedData));
+    Mail::to('dvaannemersbedrijf@gmail.com')->send(new ContactFormMail($validatedData));
 
     return redirect('/')
         ->with('success', 'Bedankt voor uw bericht. We nemen zo snel mogelijk contact met u op.')

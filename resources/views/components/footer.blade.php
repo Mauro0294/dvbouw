@@ -9,7 +9,7 @@
 
                 <p class="mt-8">
                     <div class="flex items-center gap-2">
-                    <img src="{{ asset('images/email.svg') }}" class="w-4"><a href="mailto:dimitar.dimitrov94@gmail.com">dimitar.dimitrov94@gmail.com</a>
+                    <img src="{{ asset('images/email.svg') }}" class="w-4"><a href="mailto:dvaannemersbedrijf@gmail.com">dvaannemersbedrijf@gmail.com</a>
                     </div>
                     <div class="flex items-center gap-2">
                         <img src="{{ asset('images/phone.svg') }}" class="w-4"><a href="tel:0618865015">06 18865015</a>
