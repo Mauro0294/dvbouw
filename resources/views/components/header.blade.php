@@ -4,7 +4,7 @@
         <ul class="hidden lg:flex text-lg gap-16 font-bold py-8">
             <a href="{{ route('home') }}" data-aos="fade-down" data-aos-delay="100"><li>HOME.</li></a>
             <a href="{{ route('home') }}#diensten" data-aos="fade-down" data-aos-delay="200"><li>DIENSTEN.</li></a>
-            <a href="{{ route('home') }}#contact" data-aos="fade-down" data-aos-delay="300"><li>CONTACT.</li></a>
+            <a href="#contact" data-aos="fade-down" data-aos-delay="300"><li>CONTACT.</li></a>
             <a href="{{ route('ons-werk') }}"data-aos="fade-down" data-aos-delay="400"><li>ONS WERK.</li></a>
             <a href="https://www.facebook.com/p/DV-Onderhoud-100064673394829/"data-aos="fade-down" data-aos-delay="500" target="_blank" rel="noreferrer" class="mt-1"><li><img src="{{ asset('images/facebook.png') }}" class="w-6 h-6"></li></a>
         </ul>
@@ -19,7 +19,7 @@
     <ul id="mobile-menu" class="hidden lg:hidden justify-between font-bold !py-4 container text-lg">
         <a href="{{ route('home') }}"><li class="text-center bg-[#07233B] py-2 mb-4">HOME.</li></a>
         <a href="{{ route('home') }}#diensten"><li class="text-center bg-[#07233B] py-2 mb-4">DIENSTEN.</li></a>
-        <a href="{{ route('home') }}#contact"><li class="text-center bg-[#07233B] py-2 mb-4">CONTACT.</li></a>
+        <a href="#contact"><li class="text-center bg-[#07233B] py-2 mb-4">CONTACT.</li></a>
         <a href="{{ route('ons-werk') }}"><li class="text-center bg-[#07233B] py-2">ONS WERK.</li></a>
     </ul>
 </header>
