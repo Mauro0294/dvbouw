@@ -25,3 +25,36 @@ hamburgerBtn.addEventListener('click', function() {
 
     hamburgerLines.forEach(line => line.classList.toggle('active'));
 });
+
+function getDiensten() {
+    fetch("https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clj187jrp1bfx01uq9b9yb8rb/master", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `
+          query Diensten {
+            diensten {
+              id
+              naam
+              image {
+                url
+              }
+            }
+          }
+        `,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        // Handle the response data here
+        console.log(data.data.diensten);
+      })
+      .catch((error) => {
+        // Handle any errors that occur during the fetch request
+        console.error(error);
+      });
+  }
+  
+getDiensten();

@@ -6,13 +6,13 @@
 
     <section class="bg-secondary text-white py-12" id="ons-werk">
         <div class="container">
-            <h3 class="text-sm text-white uppercase font-bold">Ons werk</h3>
+            <h3 class="text-sm text-white uppercase font-bold">{{ $data['smallHeading'] }}</h3>
             <div class="w-12 h-[2px] bg-[#D2153D] my-5"></div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-12">
-                @for ($i = 1; $i < $filecount + 1; $i++)
-                    <img src="{{ asset('images/ons-werk/' . $i . '.jpg') }}" class="w-full h-[350px]" data-aos="fade-up" data-aos-delay="{{ $i }}00">
-                @endfor
+                @foreach ($data['image'] as $key=>$image)
+                    <img src="{{ $image['url'] }}" class="w-full h-[350px]" data-aos="fade-up" data-aos-delay="{{ $key }}00">
+                @endforeach
             </div>
         </div>
         <div class="flex justify-center">

@@ -6,6 +6,10 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use App\Mail\ContactFormMail;
 use Illuminate\Support\Facades\App;
+use App\Http\Controllers\DienstenController;
+use App\Http\Controllers\KernwaardeController;
+use App\Http\Controllers\InformatieController;
+use App\Http\Controllers\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,21 +23,25 @@ use Illuminate\Support\Facades\App;
 */
 
 Route::get('/', function () {
-    $categories = Category::all();
+    $dienstenController = new DienstenController();
+    $kernwaardesController = new KernwaardeController();
+    $informatieController = new InformatieController();
+    $galleryController = new GalleryController();
 
-    return view('home', ['categories' => $categories]);
+    $diensten = $dienstenController->fetchDiensten();
+    $kernwaardes = $kernwaardesController->fetchKernwaardes();
+    $informaties = $informatieController->fetchInformatie();
+    $image = $galleryController->fetchGallery();
+
+    return view('home', compact('diensten', 'kernwaardes', 'informaties', 'image'));
 })->name('home');
 
 Route::get('/ons-werk', function () {
-    if (App::environment() == 'local') {
-        $directory = $_SERVER['DOCUMENT_ROOT'] . "/images/ons-werk/";
-    } else {
-        $directory = $_SERVER['DOCUMENT_ROOT'] . "/public/images/ons-werk/";
-    }
+    $galleryController = new GalleryController();
 
-    $filecount = count(glob($directory . "*"));
+    $data = $galleryController->fetchGallery();
 
-    return view('ons-werk', ['filecount' => $filecount]);
+    return view('ons-werk', compact('data'));
 })->name('ons-werk');
 
 Route::post('/contact', function (Request $request) {
