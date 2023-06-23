@@ -39,7 +39,9 @@ p {
     padding: 0 1rem;
 }
 
-
+.whitespace {
+    margin-top: 2rem;
+}
 
 #scroll-text {
     transition: 0.5s ease-in-out;

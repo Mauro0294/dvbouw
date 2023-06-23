@@ -10,6 +10,8 @@ use App\Http\Controllers\DienstenController;
 use App\Http\Controllers\KernwaardeController;
 use App\Http\Controllers\InformatieController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\HeroController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,21 +29,29 @@ Route::get('/', function () {
     $kernwaardesController = new KernwaardeController();
     $informatieController = new InformatieController();
     $galleryController = new GalleryController();
+    $heroController = new HeroController();
+    $contactController = new ContactController();
 
     $diensten = $dienstenController->fetchDiensten();
     $kernwaardes = $kernwaardesController->fetchKernwaardes();
     $informaties = $informatieController->fetchInformatie();
     $image = $galleryController->fetchGallery();
+    $hero = $heroController->fetchHeroes();
+    $contact = $contactController->fetchContact();
 
-    return view('home', compact('diensten', 'kernwaardes', 'informaties', 'image'));
+    return view('home', compact('diensten', 'kernwaardes', 'informaties', 'image', 'hero', 'contact'));
 })->name('home');
 
 Route::get('/ons-werk', function () {
     $galleryController = new GalleryController();
+    $heroController = new HeroController();
+    $contactController = new ContactController();
 
     $data = $galleryController->fetchGallery();
+    $hero = $heroController->fetchHeroes();
+    $contact = $contactController->fetchContact();
 
-    return view('ons-werk', compact('data'));
+    return view('ons-werk', compact('data', 'hero', 'contact'));
 })->name('ons-werk');
 
 Route::post('/contact', function (Request $request) {
