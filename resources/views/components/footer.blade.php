@@ -2,17 +2,16 @@
     <div class="lg:flex justify-between container" id="contact">
         <div data-aos="zoom-in-right">
             <div class="max-w-[400px]">
-                <h2 class="font-bold uppercase">Contact</h2>
-                <p>Wil je met ons samenwerken, heb je een mooie klus voor ons? Stuur ons dan een e-mail.</p>
-                <p class="mt-8">Via dit formulier vraag je eenvoudig een offerte aan voor in jouw (nieuwbouw)woning of (nieuwbouw)project.</p>
-                <p class="mt-8">Volg ons op <a target="_blank" rel="noreferrer" href="https://www.facebook.com/p/DV-Onderhoud-100064673394829/">facebook</a> om op de hoogte te blijven van het laatste nieuws!</p>
+                <h2 class="font-bold uppercase">{{ $contact['heading'] }}</h2>
+
+                <div class="cms-richtext">{!! $contact['description']['html'] !!}</div>
 
                 <p class="mt-8">
                     <div class="flex items-center gap-2">
-                    <img src="{{ asset('images/email.svg') }}" class="w-4"><a href="mailto:dvaannemersbedrijf@gmail.com">dvaannemersbedrijf@gmail.com</a>
+                    <img src="{{ asset('images/email.svg') }}" class="w-4"><a href="mailto:dvaannemersbedrijf@gmail.com">{{ $contact['email'] }}</a>
                     </div>
                     <div class="flex items-center gap-2">
-                        <img src="{{ asset('images/phone.svg') }}" class="w-4"><a href="tel:0618865015">06 18865015</a>
+                        <img src="{{ asset('images/phone.svg') }}" class="w-4"><a href="tel:{{ str_replace(' ', '', $contact['phoneNumber']) }}">{{ $contact['phoneNumber'] }}</a>
                     </div>
                 </p>
             </div>
@@ -49,6 +48,6 @@
     <script>
         window.onload = function() {
             window.scrollTo(0, document.body.scrollHeight);
-        };
+        };  
     </script>
 @endif
