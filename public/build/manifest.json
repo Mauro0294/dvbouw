@@ -1,10 +1,10 @@
 {
   "public/images/background_hero.png": {
-    "file": "assets/background_hero-a0b7ebf3.png",
+    "file": "assets/background_hero-a29bb134.png",
     "src": "public/images/background_hero.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-56339088.css",
+    "file": "assets/app-6f56f7ae.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
