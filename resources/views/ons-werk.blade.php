@@ -4,7 +4,7 @@
 @section('content')
     @include('components.hero')
 
-    <section class="bg-secondary text-white py-12" id="ons-werk">
+    <section class="bg-secondary text-white py-12" id="gallery">
         <div class="container">
             <h3 class="text-sm text-white uppercase font-bold">{{ $data['smallHeading'] }}</h3>
             <div class="w-12 h-[2px] bg-[#D2153D] my-5"></div>
